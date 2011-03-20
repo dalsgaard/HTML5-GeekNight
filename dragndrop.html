@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Drag & Drop</title>
+    <link href='css/common.css' rel='stylesheet' type='text/css' />
+    <link href='css/dragndrop.css' rel='stylesheet' type='text/css' />
+  </head>
+  <body>
+    <section>
+      <div draggable='true'></div>
+    </section>
+    <section class='drop'></section>
+    <script type='text/javascript'>
+      //<![CDATA[
+        var draggable = document.querySelector("section > div");
+        var droppable = document.querySelector("section.drop");
+        draggable.addEventListener('dragstart', function(e) {
+          e.dataTransfer.effectAllowed = 'copy';
+          e.dataTransfer.setData('text/plain', "Hellooo");
+          this.classList.toggle("dragging");
+        }, false);
+        draggable.addEventListener('dragend', function(e) {
+          this.classList.toggle("dragging");
+        }, false);
+        
+        droppable.addEventListener('dragover', function(e) {
+          if (e.preventDefault) {
+            e.preventDefault();
+          }
+          return false;
+        }, false);
+        droppable.addEventListener('dragenter', function(e) {
+          if (e.preventDefault) {
+            e.preventDefault();
+          }
+          return false;
+        }, false);
+        droppable.addEventListener('drop', function(e) {
+          if (e.preventDefault) {
+            e.preventDefault();
+          }
+          this.innerHTML = e.dataTransfer.getData('text/plain');
+          return false;
+        }, false);
+      //]]>
+    </script>
+  </body>
+</html>
