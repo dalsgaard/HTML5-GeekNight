@@ -1,0 +1,17 @@
+!!! 5
+
+%html
+  %head
+    %link{:href => "css/animation.css", :rel => "stylesheet", :type => "text/css"}
+  %body
+    %section
+      %div
+    :javascript
+      var div = document.querySelector("section div");
+      div.addEventListener('click', function() {
+        this.classList.toggle("selected");
+      }, false);
+      div.addEventListener('webkitAnimationEnd', function() {
+        alert("Animation Ended!");
+      }, false);
+      

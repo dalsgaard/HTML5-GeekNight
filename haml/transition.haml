@@ -1,0 +1,13 @@
+!!! 5
+
+%html
+  %head
+    %link{:href => "css/transition.css", :rel => "stylesheet", :type => "text/css"}
+  %body
+    %section
+      %div
+    :javascript
+      document.querySelector("section div").addEventListener('click', function() {
+        this.classList.toggle("selected");
+      }, false);
+      

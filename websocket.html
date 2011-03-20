@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href='css/common.css' rel='stylesheet' type='text/css' />
+    <link href='css/websocket.css' rel='stylesheet' type='text/css' />
+  </head>
+  <body>
+    <section>
+      <label>URL: ws://localhost:8340</label>
+      <input type='text' />
+      <button class='send'>Send</button>
+      <pre class='result'></pre>
+      <footer>
+        <ul>
+          <li>
+            <a href='http://dev.w3.org/html5/websockets/'>Spec</a>
+          </li>
+          <li>
+            <a href='http://www.igvita.com/2009/12/22/ruby-websockets-tcp-for-the-browser/'>Ruby & Websockets: TCP for the Web</a>
+          </li>
+        </ul>
+      </footer>
+    </section>
+    <script type='text/javascript'>
+      //<![CDATA[
+        var input = document.querySelector("input");
+        var result = document.querySelector("pre.result");
+        //var connection = new WebSocket('ws://html5rocks.websocket.org/echo');
+        var connection = new WebSocket('ws://localhost:8340');
+        connection.onopen = function () {
+          document.querySelector("button.send").addEventListener('click', function() {
+            connection.send(input.value);
+          }, false);
+        };
+        connection.onerror = function (error) {
+          result.innerHTML += "WebSocket Error " + error + "\n";
+        };
+        connection.onmessage = function (e) {
+          result.innerHTML += e.data + "\n"
+        };
+      //]]>
+    </script>
+  </body>
+</html>

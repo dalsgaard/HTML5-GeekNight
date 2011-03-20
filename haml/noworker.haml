@@ -1,0 +1,36 @@
+!!! 5
+
+%html
+  %head
+    %title Web Worker
+    %link{:href => "css/common.css", :rel => "stylesheet", :type => "text/css"}
+    %link{:href => "css/webworker.css", :rel => "stylesheet", :type => "text/css"}
+  %body
+    %section
+      %section.time
+        %button Time
+        %span
+      %section.primes
+        %button Prime Numbers
+        %div
+      %footer
+        %ul
+          %li
+            %a{:href => "http://dev.w3.org/html5/workers/"} Spec
+    :javascript
+
+      var time = document.querySelector("section.time > span");
+      document.querySelector("section.time > button").addEventListener('click', function() {
+        time.innerHTML = (new Date()).toString();
+      }, false);
+
+      var primes = document.querySelector("section.primes > div");
+      document.querySelector("section.primes > button").addEventListener('click', function() {
+        primes.innerHTML = "";
+        var worker = new Worker('js/webworker.js');
+        worker.addEventListener('message', function(e) {
+          primes.innerHTML += e.data + " ";
+        }, false);
+        worker.postMessage(200000);
+      }, false);
+      

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Web Storage - Session Storage</title>
+    <link href='css/common.css' rel='stylesheet' type='text/css' />
+    <link href='css/webstorage.css' rel='stylesheet' type='text/css' />
+  </head>
+  <body>
+    <section>
+      <div class='set'>
+        <input class='key' type='text' />
+        <input class='value' type='text' />
+        <button>Set</button>
+      </div>
+      <div class='get'>
+        <input type='text' />
+        <button>Get</button>
+        <span></span>
+      </div>
+      <div class='remove'>
+        <input type='text' />
+        <button>Remove</button>
+      </div>
+      <div class='clear'>
+        <button>Clear</button>
+      </div>
+      <div class='all'>
+        <button>All</button>
+        <pre></pre>
+      </div>
+      <footer>
+        <ul>
+          <li>
+            <a href='http://dev.w3.org/html5/webstorage/'>Spec</a>
+          </li>
+          <li>
+            <a href='http://diveintohtml5.org/storage.html'>Dive Into HTML5</a>
+          </li>
+        </ul>
+      </footer>
+    </section>
+    <script type='text/javascript'>
+      //<![CDATA[
+        var setKey = document.querySelector("div.set > input.key");
+        var setValue = document.querySelector("div.set > input.value");
+        var getKey = document.querySelector("div.get > input");
+        var getValue = document.querySelector("div.get > span");
+        var removeKey = document.querySelector("div.remove > input");
+        var all = document.querySelector("div.all > pre");
+        var changes = document.querySelector("div.changes > pre");
+        document.querySelector("div.set > button").addEventListener('click', function() {
+          sessionStorage.setItem(setKey.value, setValue.value);
+        }, false);
+        document.querySelector("div.get > button").addEventListener('click', function() {
+          getValue.innerHTML = sessionStorage.getItem(getKey.value);
+        }, false);
+        document.querySelector("div.remove > button").addEventListener('click', function() {
+          sessionStorage.removeItem(removeKey.value);
+        }, false);
+        document.querySelector("div.clear > button").addEventListener('click', function() {
+          sessionStorage.clear();
+        }, false);
+        document.querySelector("div.all > button").addEventListener('click', function() {
+          all.innerHTML = "";
+          for (var i = 0; i < sessionStorage.length; i++) {
+            var key = sessionStorage.key(i);
+            all.innerHTML += key + " : " + sessionStorage.getItem(key) + "\n";
+          }
+        }, false);
+      //]]>
+    </script>
+  </body>
+</html>

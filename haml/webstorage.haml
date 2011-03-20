@@ -1,0 +1,68 @@
+!!! 5
+
+%html
+  %head
+    %title Web Storage
+    %link{:href => "css/common.css", :rel => "stylesheet", :type => "text/css"}
+    %link{:href => "css/webstorage.css", :rel => "stylesheet", :type => "text/css"}
+    :javascript
+      function init() {
+        addEventListener('storage', function(e) {
+          //alert("Change");
+          var changes = document.querySelector("div.changes > pre");
+          changes.innerHTML += e.key + " : " + e.oldValue + " -> " + e.newValue + " (" + e.url + ")\n";
+        }, false);
+      }
+  %body{:onload => "init();"}
+    %section
+      %div.set
+        %input.key{:type => :text}
+        %input.value{:type => :text}
+        %button Set
+      %div.get
+        %input{:type => :text}
+        %button Get
+        %span
+      %div.remove
+        %input{:type => :text}
+        %button Remove
+      %div.clear
+        %button Clear
+      %div.all
+        %button All
+        %pre
+      %div.changes
+        %label Changes
+        %pre
+      %footer
+        %ul
+          %li
+            %a{:href => "http://dev.w3.org/html5/webstorage/"} Spec
+          %li
+            %a{:href => "http://diveintohtml5.org/storage.html"} Dive Into HTML5
+    :javascript
+      var setKey = document.querySelector("div.set > input.key");
+      var setValue = document.querySelector("div.set > input.value");
+      var getKey = document.querySelector("div.get > input");
+      var getValue = document.querySelector("div.get > span");
+      var removeKey = document.querySelector("div.remove > input");
+      var all = document.querySelector("div.all > pre");
+      document.querySelector("div.set > button").addEventListener('click', function() {
+        localStorage.setItem(setKey.value, setValue.value);
+      }, false);
+      document.querySelector("div.get > button").addEventListener('click', function() {
+        getValue.innerHTML = localStorage.getItem(getKey.value);
+      }, false);
+      document.querySelector("div.remove > button").addEventListener('click', function() {
+        localStorage.removeItem(removeKey.value);
+      }, false);
+      document.querySelector("div.clear > button").addEventListener('click', function() {
+        localStorage.clear();
+      }, false);
+      document.querySelector("div.all > button").addEventListener('click', function() {
+        all.innerHTML = "";
+        for (var i = 0; i < localStorage.length; i++) {
+          var key = localStorage.key(i);
+          all.innerHTML += key + " : " + localStorage.getItem(key) + "\n";
+        }
+      }, false);

@@ -1,0 +1,42 @@
+body {
+  padding: 20px;
+}
+
+section {
+  border: 2px solid #333;
+  position: relative;
+  width: 500px;
+
+  div {
+    background-color: red;
+    height: 50px;
+    left: 0px;
+    position: relative;
+    top: 0px;
+    width: 50px;
+    &.selected {
+      left: 450px;
+      -webkit-animation-name: slide;
+      -webkit-animation-duration: 2s;
+      -webkit-animation-iteration-count: 1;
+    }
+  }
+}
+
+@-webkit-keyframes slide {
+  0% {
+    left: 0px;
+    -webkit-animation-timing-function: ease-in-out;
+  }
+  70% {
+    left: 500px;
+    -webkit-animation-timing-function: ease-in-out;
+  }
+  90% {
+    left: 425px;
+    -webkit-animation-timing-function: ease-in;
+  }
+  100% {
+    left: 450px;
+  }
+}
