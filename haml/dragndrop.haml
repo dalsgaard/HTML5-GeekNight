@@ -7,7 +7,36 @@
     %link{:href => "css/dragndrop.css", :rel => "stylesheet", :type => "text/css"}
   %body
     %section
-      %div
-    %section
+      %div{:draggable => :true}
+    %section.drop
     :javascript
-      var div = document.querySelector("section div");
+      var draggable = document.querySelector("section > div");
+      var droppable = document.querySelector("section.drop");
+      draggable.addEventListener('dragstart', function(e) {
+        e.dataTransfer.effectAllowed = 'copy';
+        e.dataTransfer.setData('text/plain', "Hellooo");
+        this.classList.toggle("dragging");
+      }, false);
+      draggable.addEventListener('dragend', function(e) {
+        this.classList.toggle("dragging");
+      }, false);
+      
+      droppable.addEventListener('dragover', function(e) {
+        if (e.preventDefault) {
+          e.preventDefault();
+        }
+        return false;
+      }, false);
+      droppable.addEventListener('dragenter', function(e) {
+        if (e.preventDefault) {
+          e.preventDefault();
+        }
+        return false;
+      }, false);
+      droppable.addEventListener('drop', function(e) {
+        if (e.preventDefault) {
+          e.preventDefault();
+        }
+        this.innerHTML = e.dataTransfer.getData('text/plain');
+        return false;
+      }, false);
