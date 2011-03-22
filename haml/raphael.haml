@@ -1,0 +1,19 @@
+!!! 5
+
+%html
+  %head
+    %title Raphaël
+    %link{:href => "css/common.css", :rel => "stylesheet", :type => "text/css"}
+    %link{:href => "css/raphael.css", :rel => "stylesheet", :type => "text/css"}
+    %script{:src => "js/lib/raphael.js", :type => "text/javascript", :charset => "utf-8"}
+  %body
+    %section
+      %section.raphael
+      %footer
+        %ul
+          %li
+            %a{:href => "http://raphaeljs.com/"} Raphaël
+    :javascript
+      var target = document.querySelector("section.raphael");
+      var paper = Raphael(target, 200, 200);
+      var circle = paper.circle(50, 50, 40);
