@@ -1,0 +1,44 @@
+!!! 5
+
+%html
+  %head
+    %meta{:charset => "utf-8"}
+    %title New Semantic Tags
+    %link{:href => "css/common.css", :rel => "stylesheet", :type => "text/css"}
+    %link{:href => "css/semantic.css", :rel => "stylesheet", :type => "text/css"}
+  %body
+    %header
+      %hgroup
+        %h1 Page Header
+        %h2 Sub-header for page
+    %section
+      %header
+        %hgroup
+          %h2 Section Header
+          %h3 Sub-header for section
+      %section
+        %h3 Title
+        %p Some text
+      %footer
+        %nav
+          %h1 Navigation
+          %ul
+            %li
+              %a{:href => "http://dev.w3.org/html5/"} Spec
+    %article
+      %header
+        %h1 Article Header
+          %section
+            %h2 Title
+            %p Some text
+      %footer
+        %nav
+          %ul
+            %li
+              %a{:href => "http://dev.w3.org/html5/"} Spec
+    %footer
+      %nav
+        %h1 Navigation
+        %ul
+          %li
+            %a{:href => "http://dev.w3.org/html5/"} Spec
