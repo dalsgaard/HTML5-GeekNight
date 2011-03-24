@@ -1,0 +1,19 @@
+section.property ul.box {
+  border: 1px solid black;
+  display: -webkit-box;
+  padding: 5px;
+  width: 400px; }
+  section.property ul.box li {
+    height: 50px;
+    margin: 5px;
+    width: 50px; }
+    section.property ul.box li:nth-child(1) {
+      background-color: red; }
+    section.property ul.box li:nth-child(2) {
+      background-color: green; }
+    section.property ul.box li:nth-child(3) {
+      background-color: blue; }
+section.property.vertical ul.box {
+  -webkit-box-orient: vertical; }
+section.property.horizontal ul.box {
+  -webkit-box-orient: horizontal; }

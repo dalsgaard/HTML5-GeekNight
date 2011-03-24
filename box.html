@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <title>Flexible Box model</title>
+    <link href='css/common.css' rel='stylesheet' type='text/css' />
+    <link href='css/box.css' rel='stylesheet' type='text/css' />
+  </head>
+  <body>
+    <header>
+      <hgroup>
+        <h1>Flexible Box model</h1>
+        <h2>No more 'float'!</h2>
+      </hgroup>
+    </header>
+    <section>
+      <section class='property orient'>
+        <h2>box-orient</h2>
+        <ul class='values'>
+          <li class='horizontal'>horizontal</li>
+          <li class='vertical'>vertical</li>
+        </ul>
+        <ul class='box'>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </section>
+    </section>
+    <footer>
+      <h1>Links</h1>
+      <ul>
+        <li>
+          <a href='http://www.w3.org/TR/css3-flexbox/'>Spec</a>
+        </li>
+        <li>
+          <a href='http://www.html5rocks.com/tutorials/flexbox/quick/'>HTML5 Rocks</a>
+        </li>
+      </ul>
+    </footer>
+    <script type='text/javascript'>
+      //<![CDATA[
+        (function() {
+          var section = document.querySelector("section.property.orient");
+          var selected = null;
+          var values = section.querySelectorAll("ul.values > li");
+          for (var i =0; i < values.length; i++) {
+            values[i].addEventListener('click', function() {
+              if (selected != null) {
+                section.classList.remove(selected.innerHTML);
+              }
+              section.classList.add(this.innerHTML);
+              selected = this;
+            }, false);
+          }
+        })();
+      //]]>
+    </script>
+  </body>
+</html>

@@ -2,3 +2,12 @@
 label {
   display: block;
 }
+
+ul {
+  margin: 0px;
+  padding: 0px;
+
+  li {
+    list-style-type: none;
+  }
+}

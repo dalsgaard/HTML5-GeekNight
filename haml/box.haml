@@ -12,13 +12,34 @@
         %h1 Flexible Box model
         %h2 No more 'float'!
     %section
-      %ul
+      %section.property.orient
+        %h2 box-orient
+        %ul.values
+          %li.horizontal horizontal
+          %li.vertical vertical
+        %ul.box
+          %li
+          %li
+          %li
     %footer
       %h1 Links
-        %ul
-          %li
-            %a{:href => "http://www.w3.org/TR/css3-flexbox/"} Spec
-          %li
-            %a{:href => "http://www.html5rocks.com/tutorials/flexbox/quick/"} HTML5 Rocks
+      %ul
+        %li
+          %a{:href => "http://www.w3.org/TR/css3-flexbox/"} Spec
+        %li
+          %a{:href => "http://www.html5rocks.com/tutorials/flexbox/quick/"} HTML5 Rocks
     :javascript
-      var input = document.querySelector("input");
+      (function() {
+        var section = document.querySelector("section.property.orient");
+        var selected = null;
+        var values = section.querySelectorAll("ul.values > li");
+        for (var i =0; i < values.length; i++) {
+          values[i].addEventListener('click', function() {
+            if (selected != null) {
+              section.classList.remove(selected.innerHTML);
+            }
+            section.classList.add(this.innerHTML);
+            selected = this;
+          }, false);
+        }
+      })();
