@@ -1,0 +1,21 @@
+!!! 5
+
+%html
+  %head
+    %meta{:charset => "utf-8"}
+    %title Template
+    %link{:href => "css/common.css", :rel => "stylesheet", :type => "text/css"}
+    %link{:href => "css/template.css", :rel => "stylesheet", :type => "text/css"}
+  %body
+    %header
+      %hgroup
+        %h1 Title
+        %h2 Subtitle
+    %section
+    %footer
+      %h1 Links
+        %ul
+          %li
+            %a{:href => "http://dev.w3.org/html5/websockets/"} WebSockets Spec
+    :javascript
+      var input = document.querySelector("input");
