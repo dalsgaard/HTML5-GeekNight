@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SVG</title>
+    <link href='css/common.css' rel='stylesheet' type='text/css' />
+    <link href='css/svg.css' rel='stylesheet' type='text/css' />
+  </head>
+  <body>
+    <section>
+      <section class='svg'>
+        <svg height='200' version='1.1' width='200' xmlns='http://www.w3.org/2000/svg'>
+          <circle cx='60' cy='70' fill='#49A' r='50' stroke='#000'></circle>
+        </svg>
+      </section>
+      <footer>
+        <ul>
+          <li>
+            <a href='http://raphaeljs.com/'>Raphael</a>
+          </li>
+        </ul>
+      </footer>
+    </section>
+    <script type='text/javascript'>
+      //<![CDATA[
+        var circle = document.querySelector("svg > circle");
+        circle.addEventListener('click', function(e) {
+          alert("Circle clicked!");
+        }, false);
+      //]]>
+    </script>
+  </body>
+</html>

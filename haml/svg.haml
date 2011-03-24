@@ -1,0 +1,21 @@
+!!! 5
+
+%html
+  %head
+    %title SVG
+    %link{:href => "css/common.css", :rel => "stylesheet", :type => "text/css"}
+    %link{:href => "css/svg.css", :rel => "stylesheet", :type => "text/css"}
+  %body
+    %section
+      %section.svg
+        %svg{:xmlns => "http://www.w3.org/2000/svg", :version => "1.1", :width => 200, :height => 200}
+          %circle{:cx => 60, :cy => 70, :r => 50, :fill => "#49A", :stroke => "#000"}
+      %footer
+        %ul
+          %li
+            %a{:href => "http://raphaeljs.com/"} Raphael
+    :javascript
+      var circle = document.querySelector("svg > circle");
+      circle.addEventListener('click', function(e) {
+        alert("Circle clicked!");
+      }, false);
