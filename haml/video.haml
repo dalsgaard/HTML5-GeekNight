@@ -1,0 +1,44 @@
+!!! 5
+
+%html
+  %head
+    %meta{:charset => "utf-8"}
+    %title Video
+    %link{:href => "css/common.css", :rel => "stylesheet", :type => "text/css"}
+    %link{:href => "css/video.css", :rel => "stylesheet", :type => "text/css"}
+  %body
+    %header
+      %hgroup
+        %h1 Video
+        %h2 Playing video on the web
+    %section
+      %section
+        %video{:width => 320, :height => 240, :controls => true}
+          %source{:src => "http://diveintohtml5.com/i/pr6.webm", :type => 'video/webm; codecs="vp8, vorbis"'}
+          %source{:src => "http://diveintohtml5.com/i/pr6.mp4", :type => 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"'}
+          %source{:src => "http://diveintohtml5.com/i/pr6.ogv", :type => 'video/ogg; codecs="theora, vorbis"'}
+      %section.nocontrols
+        %video{:width => 320, :height => 240}
+          %source{:src => "http://diveintohtml5.com/i/pr6.webm", :type => 'video/webm; codecs="vp8, vorbis"'}
+          %source{:src => "http://diveintohtml5.com/i/pr6.mp4", :type => 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"'}
+          %source{:src => "http://diveintohtml5.com/i/pr6.ogv", :type => 'video/ogg; codecs="theora, vorbis"'}
+        %div.controls
+          %button.play Play
+          %button.pause Pause
+    %footer
+      %h1 Links
+      %ul
+        %li
+          %a{:href => "http://www.w3.org/TR/html5/video.html"} Spec
+        %li
+          %a{:href => "http://diveintohtml5.org/video.html"} Dive Into HTML5
+        %li
+          %a{:href => "http://www.html5rocks.com/tutorials/video/basics/"} HTML5 Rocks
+    :javascript
+      var video = document.querySelector("section.nocontrols video");
+      document.querySelector("div.controls button.play").addEventListener('click', function(e) {
+        video.play();
+      }, false);
+      document.querySelector("div.controls button.pause").addEventListener('click', function(e) {
+        video.pause();
+      }, false);

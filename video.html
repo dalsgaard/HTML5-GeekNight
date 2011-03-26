@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <title>Template</title>
+    <link href='css/common.css' rel='stylesheet' type='text/css' />
+    <link href='css/video.css' rel='stylesheet' type='text/css' />
+  </head>
+  <body>
+    <header>
+      <hgroup>
+        <h1>Video</h1>
+        <h2>Playing video on the web</h2>
+      </hgroup>
+    </header>
+    <section>
+      <section>
+        <video controls='controls' height='240' width='320'>
+          <source src='http://diveintohtml5.com/i/pr6.webm' type='video/webm; codecs="vp8, vorbis"'></source>
+          <source src='http://diveintohtml5.com/i/pr6.mp4' type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'></source>
+          <source src='http://diveintohtml5.com/i/pr6.ogv' type='video/ogg; codecs="theora, vorbis"'></source>
+        </video>
+      </section>
+      <section class='nocontrols'>
+        <video height='240' width='320'>
+          <source src='http://diveintohtml5.com/i/pr6.webm' type='video/webm; codecs="vp8, vorbis"'></source>
+          <source src='http://diveintohtml5.com/i/pr6.mp4' type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'></source>
+          <source src='http://diveintohtml5.com/i/pr6.ogv' type='video/ogg; codecs="theora, vorbis"'></source>
+        </video>
+        <div class='controls'>
+          <button class='play'>Play</button>
+          <button class='pause'>Pause</button>
+        </div>
+      </section>
+    </section>
+    <footer>
+      <h1>Links</h1>
+      <ul>
+        <li>
+          <a href='http://www.w3.org/TR/html5/video.html'>Spec</a>
+        </li>
+      </ul>
+    </footer>
+    <script type='text/javascript'>
+      //<![CDATA[
+        var video = document.querySelector("section.nocontrols video");
+        document.querySelector("div.controls button.play").addEventListener('click', function(e) {
+          video.play();
+        }, false);
+        document.querySelector("div.controls button.pause").addEventListener('click', function(e) {
+          video.pause();
+        }, false);
+      //]]>
+    </script>
+  </body>
+</html>
