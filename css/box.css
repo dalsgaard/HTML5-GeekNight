@@ -17,3 +17,60 @@ section.property.vertical ul.box {
   -webkit-box-orient: vertical; }
 section.property.horizontal ul.box {
   -webkit-box-orient: horizontal; }
+section.property.pack.start ul.box {
+  -webkit-box-pack: start; }
+section.property.pack.end ul.box {
+  -webkit-box-pack: end; }
+section.property.pack.center ul.box {
+  -webkit-box-pack: center; }
+section.property.pack.justify ul.box {
+  -webkit-box-pack: justify; }
+section.property.align ul.box {
+  height: 100px; }
+  section.property.align ul.box li:nth-child(1) {
+    height: 40px; }
+  section.property.align ul.box li:nth-child(2) {
+    height: 50px; }
+  section.property.align ul.box li:nth-child(3) {
+    height: 60px; }
+section.property.align.start ul.box {
+  -webkit-box-align: start; }
+section.property.align.end ul.box {
+  -webkit-box-align: end; }
+section.property.align.center ul.box {
+  -webkit-box-align: center; }
+section.property.align.baseline ul.box {
+  -webkit-box-align: baseline; }
+section.property.align.stretch ul.box li:nth-child(2) {
+  height: auto;
+  -webkit-box-align: stretch; }
+section.property.flex.F000 ul.box li:nth-child(1) {
+  -webkit-box-flex: 0; }
+section.property.flex.F000 ul.box li:nth-child(2) {
+  -webkit-box-flex: 0; }
+section.property.flex.F000 ul.box li:nth-child(3) {
+  -webkit-box-flex: 0; }
+section.property.flex.F111 ul.box li:nth-child(1) {
+  -webkit-box-flex: 1; }
+section.property.flex.F111 ul.box li:nth-child(2) {
+  -webkit-box-flex: 1; }
+section.property.flex.F111 ul.box li:nth-child(3) {
+  -webkit-box-flex: 1; }
+section.property.flex.F122 ul.box li:nth-child(1) {
+  -webkit-box-flex: 1; }
+section.property.flex.F122 ul.box li:nth-child(2) {
+  -webkit-box-flex: 2; }
+section.property.flex.F122 ul.box li:nth-child(3) {
+  -webkit-box-flex: 2; }
+section.property.flex.F123 ul.box li:nth-child(1) {
+  -webkit-box-flex: 1; }
+section.property.flex.F123 ul.box li:nth-child(2) {
+  -webkit-box-flex: 2; }
+section.property.flex.F123 ul.box li:nth-child(3) {
+  -webkit-box-flex: 3; }
+section.property ul.values {
+  display: -webkit-box; }
+  section.property ul.values li {
+    padding: 10px; }
+    section.property ul.values li.selected {
+      font-weight: bold; }

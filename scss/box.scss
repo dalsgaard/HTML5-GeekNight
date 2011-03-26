@@ -35,4 +35,154 @@ section.property {
       -webkit-box-orient: horizontal;
     }
   }
+  
+  
+  &.pack.start {
+    ul.box {
+      -webkit-box-pack: start;
+    }
+  }
+  
+  &.pack.end {
+    ul.box {
+      -webkit-box-pack: end;
+    }
+  }
+  
+  &.pack.center {
+    ul.box {
+      -webkit-box-pack: center;
+    }
+  }
+  
+  &.pack.justify {
+    ul.box {
+      -webkit-box-pack: justify;
+    }
+  }
+
+
+  &.align {
+    ul.box {
+      height: 100px;
+
+      li:nth-child(1) {
+        height: 40px;
+      }
+      li:nth-child(2) {
+        height: 50px;
+      }
+      li:nth-child(3) {
+        height: 60px;
+      }
+    }
+  }
+  
+  &.align.start {
+    ul.box {
+      -webkit-box-align: start;
+    }
+  }
+  
+  &.align.end {
+    ul.box {
+      -webkit-box-align: end;
+    }
+  }
+  
+  &.align.center {
+    ul.box {
+      -webkit-box-align: center;
+    }
+  }
+  
+  &.align.baseline {
+    ul.box {
+      -webkit-box-align: baseline;
+    }
+  }
+  
+  &.align.stretch {
+    ul.box {
+      
+      li:nth-child(2) {
+        height: auto;
+        -webkit-box-align: stretch;
+      }
+    }
+  }
+
+
+  &.flex.F000 {
+    ul.box {
+      
+      li:nth-child(1) {
+        -webkit-box-flex: 0;
+      }
+      li:nth-child(2) {
+        -webkit-box-flex: 0;
+      }
+      li:nth-child(3) {
+        -webkit-box-flex: 0;
+      }
+    }
+  }
+
+  &.flex.F111 {
+    ul.box {
+      
+      li:nth-child(1) {
+        -webkit-box-flex: 1;
+      }
+      li:nth-child(2) {
+        -webkit-box-flex: 1;
+      }
+      li:nth-child(3) {
+        -webkit-box-flex: 1;
+      }
+    }
+  }
+
+  &.flex.F122 {
+    ul.box {
+      
+      li:nth-child(1) {
+        -webkit-box-flex: 1;
+      }
+      li:nth-child(2) {
+        -webkit-box-flex: 2;
+      }
+      li:nth-child(3) {
+        -webkit-box-flex: 2;
+      }
+    }
+  }
+
+  &.flex.F123 {
+    ul.box {
+      
+      li:nth-child(1) {
+        -webkit-box-flex: 1;
+      }
+      li:nth-child(2) {
+        -webkit-box-flex: 2;
+      }
+      li:nth-child(3) {
+        -webkit-box-flex: 3;
+      }
+    }
+  }
+
+
+  ul.values {
+    display: -webkit-box;
+    
+    li {
+      padding: 10px;
+      
+      &.selected {
+        font-weight: bold;
+      }
+    }
+  }
 }

@@ -26,6 +26,49 @@
           <li></li>
         </ul>
       </section>
+      <section class='property pack'>
+        <h2>box-pack</h2>
+        <ul class='values'>
+          <li class='start'>start</li>
+          <li class='end'>end</li>
+          <li class='center'>center</li>
+          <li class='justify'>justify</li>
+        </ul>
+        <ul class='box'>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </section>
+      <section class='property align'>
+        <h2>box-align</h2>
+        <ul class='values'>
+          <li class='start'>start</li>
+          <li class='end'>end</li>
+          <li class='center'>center</li>
+          <li class='baseline'>baseline</li>
+          <li class='stretch'>stretch</li>
+        </ul>
+        <ul class='box'>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </section>
+      <section class='property flex'>
+        <h2>box-flex</h2>
+        <ul class='values'>
+          <li class='F000'>0-0-0</li>
+          <li class='F111'>1-1-1</li>
+          <li class='F122'>1-2-2</li>
+          <li class='F123'>1-2-3</li>
+        </ul>
+        <ul class='box'>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </section>
     </section>
     <footer>
       <h1>Links</h1>
@@ -40,20 +83,26 @@
     </footer>
     <script type='text/javascript'>
       //<![CDATA[
-        (function() {
-          var section = document.querySelector("section.property.orient");
+        function initValues(property) {
+          var section = document.querySelector("section.property." + property);
           var selected = null;
           var values = section.querySelectorAll("ul.values > li");
           for (var i =0; i < values.length; i++) {
             values[i].addEventListener('click', function() {
               if (selected != null) {
-                section.classList.remove(selected.innerHTML);
+                selected.classList.remove('selected');
+                section.classList.remove(selected.className);
               }
-              section.classList.add(this.innerHTML);
+              section.classList.add(this.className);
               selected = this;
+              selected.classList.add('selected');
             }, false);
           }
-        })();
+        };
+        initValues("orient");
+        initValues("pack");
+        initValues("align");
+        initValues("flex");
       //]]>
     </script>
   </body>
