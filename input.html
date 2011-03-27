@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <title>Input</title>
+    <link href='css/common.css' rel='stylesheet' type='text/css' />
+    <link href='css/input.css' rel='stylesheet' type='text/css' />
+  </head>
+  <body>
+    <header>
+      <hgroup>
+        <h1>Input</h1>
+        <h2>New Input Types</h2>
+      </hgroup>
+    </header>
+    <section>
+      <section>
+        <ul>
+          <li>
+            <label>placeholder</label>
+            <input placeholder='Placeholder text' type='text' />
+          </li>
+          <li>
+            <label>email</label>
+            <input type='email' />
+          </li>
+          <li>
+            <label>url</label>
+            <input type='url' />
+          </li>
+          <li class='number'>
+            <label>number</label>
+            <input max='10' min='0' step='2' type='number' value='0' />
+            <button class='up'>Up</button>
+            <button class='down'>Down</button>
+          </li>
+          <li>
+            <label>date</label>
+            <input type='date' />
+          </li>
+          <li>
+            <label>time</label>
+            <input type='time' />
+          </li>
+          <li>
+            <label>search</label>
+            <input type='search' />
+          </li>
+        </ul>
+      </section>
+    </section>
+    <footer>
+      <h1>Links</h1>
+      <ul>
+        <li>
+          <a href='http://dev.w3.org/html5/'>Spec</a>
+        </li>
+      </ul>
+    </footer>
+    <script type='text/javascript'>
+      //<![CDATA[
+        var numberInput = document.querySelector("li.number input");
+        document.querySelector("li.number button.up").addEventListener('click', function(e) {
+          if (numberInput.valueAsNumber < numberInput.max) {
+            numberInput.stepUp(1);
+          }
+        }, false);
+        document.querySelector("li.number button.down").addEventListener('click', function(e) {
+          if (numberInput.valueAsNumber > numberInput.min) {
+            numberInput.stepDown(1);
+          }
+        }, false);
+      //]]>
+    </script>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+!!! 5
+
+%html
+  %head
+    %meta{:charset => "utf-8"}
+    %title Input
+    %link{:href => "css/common.css", :rel => "stylesheet", :type => "text/css"}
+    %link{:href => "css/input.css", :rel => "stylesheet", :type => "text/css"}
+  %body
+    %header
+      %hgroup
+        %h1 Input
+        %h2 New Input Types
+    %section
+      %section
+        %ul
+          %li
+            %label placeholder
+            %input{:type => "text", :placeholder => "Placeholder text"}
+          %li
+            %label email
+            %input{:type => "email"}
+          %li
+            %label url
+            %input{:type => "url"}
+          %li.number
+            %label number
+            %input{:type => "number", :min => 0, :max => 10, :step => 2, :value => 0}
+            %button.up Up
+            %button.down Down
+          %li
+            %label date
+            %input{:type => "date"}
+          %li
+            %label time
+            %input{:type => "time"}
+          %li
+            %label search
+            %input{:type => "search"}
+          
+    %footer
+      %h1 Links
+      %ul
+        %li
+          %a{:href => "http://dev.w3.org/html5/"} Spec
+    :javascript
+      var numberInput = document.querySelector("li.number input");
+      document.querySelector("li.number button.up").addEventListener('click', function(e) {
+        if (numberInput.valueAsNumber < numberInput.max) {
+          numberInput.stepUp(1);
+        }
+      }, false);
+      document.querySelector("li.number button.down").addEventListener('click', function(e) {
+        if (numberInput.valueAsNumber > numberInput.min) {
+          numberInput.stepDown(1);
+        }
+      }, false);
