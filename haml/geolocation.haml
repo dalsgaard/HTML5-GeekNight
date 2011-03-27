@@ -1,0 +1,40 @@
+!!! 5
+
+%html
+  %head
+    %meta{:charset => "utf-8"}
+    %title Geolocation
+    %link{:href => "css/common.css", :rel => "stylesheet", :type => "text/css"}
+    %link{:href => "css/geolocation.css", :rel => "stylesheet", :type => "text/css"}
+  %body
+    %header
+      %hgroup
+        %h1 Geolocation
+        %h2 Getting the current location
+    %section
+      %dl.position
+        %dt Latitude
+        %dd.latitude
+        %dt Longitude
+        %dd.longitude
+        %dt Accuracy
+        %dd.accuracy
+      %button.go Go
+    %footer
+      %h1 Links
+      %ul
+        %li
+          %a{:href => "http://www.w3.org/TR/geolocation-API/"} Spec
+    :javascript
+      // WGS84
+      function successCallback(position) {
+        document.querySelector("dl.position > dd.latitude").innerHTML = position.coords.latitude;
+        document.querySelector("dl.position > dd.longitude").innerHTML = position.coords.longitude;
+        document.querySelector("dl.position > dd.accuracy").innerHTML = position.coords.accuracy;
+      }
+      function errorCallback(error) {
+        alert(error.message + " : " + error.code);
+      }
+      document.querySelector("button.go").addEventListener('click', function(e) {
+        navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+      }, false);
