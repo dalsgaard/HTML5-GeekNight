@@ -1,0 +1,24 @@
+
+body > section {
+  background-color: red;
+  min-height: 200px;
+
+	.narrow {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	
+	body > section {
+		background-color: green;
+		
+		.narrow {
+			display: inherit;
+		}
+		.wide {
+			display: none;
+		}
+	}
+	
+}
