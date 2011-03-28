@@ -12,26 +12,29 @@
         %h1 Transformation 2D
         %h2 Transformations in the 2D space
     %section
-      %section.transform.translate
-        %div.outer
-          %div.inner
-        %h2 translate
-      %section.transform.scale
-        %div.outer
-          %div.inner
-        %h2 scale
-      %section.transform.rotate
-        %div.outer
-          %div.inner
-        %h2 rotate
-      %section.transform.skew
-        %div.outer
-          %div.inner
-        %h2 skew
+      %section
+        %section.transform.translate
+          %div.outer
+            %div.inner
+          %h2 translate
+        %section.transform.scale
+          %div.outer
+            %div.inner
+          %h2 scale
+        %section.transform.rotate
+          %div.outer
+            %div.inner
+          %h2 rotate
+        %section.transform.skew
+          %div.outer
+            %div.inner
+          %h2 skew
+      %aside
     %footer
-      %h1 Links
-      %ul
-        %li
-          %a{:href => "http://www.w3.org/TR/css3-2d-transforms/"} Spec
+      %nav
+        %h1 Links
+        %ul
+          %li
+            %a{:href => "http://www.w3.org/TR/css3-2d-transforms/"} Spec
     :javascript
       var input = document.querySelector("input");
