@@ -4,7 +4,14 @@ section.transform {
     border: 2px solid black;
     margin: 20px; }
     section.transform div.outer div.inner {
-      background-color: red;
+      background-color: rgba(200, 0, 0, 0.6);
       height: 50px;
-      width: 50px;
-      -webkit-transform: translate(10px, 15px); }
+      width: 50px; }
+  section.transform.translate div.outer div.inner {
+    -webkit-transform: translate(10px, 15px); }
+  section.transform.scale div.outer div.inner {
+    -webkit-transform: scale(0.7, 1.3); }
+  section.transform.rotate div.outer div.inner {
+    -webkit-transform: rotate(20deg); }
+  section.transform.skew div.outer div.inner {
+    -webkit-transform: skew(20deg); }

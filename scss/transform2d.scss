@@ -7,10 +7,49 @@ section.transform {
     margin: 20px;
   
     div.inner {
-      background-color: red;
+      background-color: rgba(200, 0, 0, 0.6);
       height: 50px;
       width: 50px;
-      -webkit-transform: translate(10px, 15px);
+    }
+  }
+  
+  &.translate {
+  
+    div.outer {
+    
+      div.inner {
+        -webkit-transform: translate(10px, 15px);
+      }
+    }
+  }
+
+  &.scale {
+  
+    div.outer {
+    
+      div.inner {
+        -webkit-transform: scale(0.7, 1.3);
+      }
+    }
+  }
+
+  &.rotate {
+  
+    div.outer {
+    
+      div.inner {
+        -webkit-transform: rotate(20deg);
+      }
+    }
+  }
+
+  &.skew {
+  
+    div.outer {
+    
+      div.inner {
+        -webkit-transform: skew(20deg);
+      }
     }
   }
 }
