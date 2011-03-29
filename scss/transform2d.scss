@@ -1,6 +1,12 @@
 
 section.transform {
   display: -webkit-box;
+	-webkit-box-align: center;
+	-webkit-box-orient: vertical;
+	
+	& + section.transform {
+		margin-left: 20px;
+	}
 
   div.outer {
     border: 2px solid black;
