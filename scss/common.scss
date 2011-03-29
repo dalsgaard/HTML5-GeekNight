@@ -29,8 +29,20 @@ body {
 		& > aside {
 			border: 3px solid #555;
 			margin-left: 20px;
+			padding: 20px;
 			min-width: 60px;
 			-webkit-border-radius: 10px;
+			
+			li + li {
+				margin-top: 5px;
+			}
+		}
+
+		& > section {
+			display: -webkit-box;
+			-webkit-box-align: start;
+			-webkit-box-flex: 1;
+			-webkit-box-orient: horizontal;
 		}
 
 		h2 {
