@@ -1,0 +1,52 @@
+!!! 5
+
+%html
+  %head
+    %meta{:charset => "utf-8"}
+    %title Canvas
+    %link{:href => "css/common.css", :rel => "stylesheet", :type => "text/css"}
+    %link{:href => "css/template.css", :rel => "stylesheet", :type => "text/css"}
+  %body
+    %header
+      %hgroup
+        %h1 Canvas
+        %h2 Bitmap Graphics for the Web
+    %section
+      %section
+        %canvas{:width => 300, :height => 300}
+      %aside
+        %ul
+          %li canvas
+          %li getContext("2d")
+          %li strokeStyle
+          %li fillStyle
+          %li fillRect
+          %li strokeRect
+          %li beginPath
+          %li arc
+          %li moveTo
+          %li lineTo
+          %li closePath
+          %li fill
+          %li stroke
+          %li save
+          %li restore
+    %footer
+      %nav
+        %h1 Links
+        %ul
+          %li
+            %a{:href => "http://dev.w3.org/html5/"} Spec
+    :javascript
+      var canvas = document.querySelector("canvas");
+      var context = canvas.getContext("2d");
+      context.strokeStyle = "#000";
+      context.fillStyle = "#66F";
+      context.fillRect(60, 60, 80, 60);
+      context.strokeRect(60, 60, 80, 60);
+      context.beginPath();
+      context.arc(60, 60, 40, 0, Math.PI * 2, false);
+      context.closePath();
+      context.fillStyle = "#F66";
+      context.fill();
+      context.stroke();

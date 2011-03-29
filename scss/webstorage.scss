@@ -1,0 +1,8 @@
+
+body > section > section {
+  -webkit-box-orient: vertical;
+  
+  section + section {
+    margin-top: 20px;
+  }
+}

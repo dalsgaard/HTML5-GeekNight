@@ -22,7 +22,7 @@ body {
 		background-color: white;
 		color: black;
 		display: -webkit-box;
-		min-height: 400px;
+		min-height: 250px;
 		padding: 20px 50px;
 		-webkit-box-orient: horizontal;	
 
@@ -35,6 +35,10 @@ body {
 			
 			li + li {
 				margin-top: 5px;
+			}
+			
+			ul + ul {
+			  margin-top: 20px;
 			}
 		}
 
@@ -89,6 +93,22 @@ ul {
   li {
     list-style-type: none;
   }
+}
+
+dl {
+
+  dt {
+    font-size: 90%;
+    font-weight: bold;
+  }
+
+  dd {
+    margin-bottom: 5px;
+  }
+}
+
+button {
+  padding: 3px 5px;
 }
 
 .hbox {

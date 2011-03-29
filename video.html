@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset='utf-8' />
-    <title>Template</title>
+    <title>Video</title>
     <link href='css/common.css' rel='stylesheet' type='text/css' />
     <link href='css/video.css' rel='stylesheet' type='text/css' />
   </head>
@@ -15,29 +15,47 @@
     </header>
     <section>
       <section>
-        <video controls='controls' height='240' width='320'>
-          <source src='http://diveintohtml5.com/i/pr6.webm' type='video/webm; codecs="vp8, vorbis"'></source>
-          <source src='http://diveintohtml5.com/i/pr6.mp4' type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'></source>
-          <source src='http://diveintohtml5.com/i/pr6.ogv' type='video/ogg; codecs="theora, vorbis"'></source>
-        </video>
+        <section class='video'>
+          <video controls='controls' height='240' width='320'>
+            <source src='http://diveintohtml5.com/i/pr6.webm' type='video/webm; codecs="vp8, vorbis"'></source>
+            <source src='http://diveintohtml5.com/i/pr6.mp4' type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'></source>
+            <source src='http://diveintohtml5.com/i/pr6.ogv' type='video/ogg; codecs="theora, vorbis"'></source>
+          </video>
+        </section>
+        <section class='video nocontrols'>
+          <video height='240' width='320'>
+            <source src='http://diveintohtml5.com/i/pr6.webm' type='video/webm; codecs="vp8, vorbis"'></source>
+            <source src='http://diveintohtml5.com/i/pr6.mp4' type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'></source>
+            <source src='http://diveintohtml5.com/i/pr6.ogv' type='video/ogg; codecs="theora, vorbis"'></source>
+          </video>
+          <div class='controls'>
+            <button class='play'>Play</button>
+            <button class='pause'>Pause</button>
+          </div>
+        </section>
       </section>
-      <section class='nocontrols'>
-        <video height='240' width='320'>
-          <source src='http://diveintohtml5.com/i/pr6.webm' type='video/webm; codecs="vp8, vorbis"'></source>
-          <source src='http://diveintohtml5.com/i/pr6.mp4' type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'></source>
-          <source src='http://diveintohtml5.com/i/pr6.ogv' type='video/ogg; codecs="theora, vorbis"'></source>
-        </video>
-        <div class='controls'>
-          <button class='play'>Play</button>
-          <button class='pause'>Pause</button>
-        </div>
-      </section>
+      <aside>
+        <ul>
+          <li>video</li>
+          <li>source</li>
+          <li>video/webm</li>
+          <li>video/mp4</li>
+          <li>video/ogg</li>
+          <li>codecs</li>
+        </ul>
+      </aside>
     </section>
     <footer>
       <h1>Links</h1>
       <ul>
         <li>
           <a href='http://www.w3.org/TR/html5/video.html'>Spec</a>
+        </li>
+        <li>
+          <a href='http://diveintohtml5.org/video.html'>Dive Into HTML5</a>
+        </li>
+        <li>
+          <a href='http://www.html5rocks.com/tutorials/video/basics/'>HTML5 Rocks</a>
         </li>
       </ul>
     </footer>

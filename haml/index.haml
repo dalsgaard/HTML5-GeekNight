@@ -1,0 +1,63 @@
+!!! 5
+
+%html
+  %head
+    %meta{:charset => "utf-8"}
+    %title HTML5 GeekNight
+    %link{:href => "css/common.css", :rel => "stylesheet", :type => "text/css"}
+    %link{:href => "css/index.css", :rel => "stylesheet", :type => "text/css"}
+  %body
+    %header
+      %hgroup
+        %h1 HTML5 GeekNight
+        %h2 Moderne web-udvikling med HTML5, CSS3 og JavaScript
+    %section
+      %section
+        %nav
+          %ul
+            %li
+              %a{:href => "semantic.html"} Semantic Tags
+            %li
+              %a{:href => "input.html"} New Form Fields
+            %li
+              %a{:href => "microdata.html"} Microdata
+            %li
+              %a{:href => "video.html"} Video
+        %nav
+          %ul
+            %li
+              %a{:href => "transition.html"} Transitions
+            %li
+              %a{:href => "animation.html"} Animations
+            %li
+              %a{:href => "transform2d.html"} Transformations
+            %li
+              %a{:href => "box.html"} Flexible Box Model 
+        %nav
+          %ul
+            %li
+              %a{:href => "canvas.html"} Canvas
+            %li
+              %a{:href => "svg.html"} SVG
+            %li
+              %a{:href => "http://bodybrowser.googlelabs.com/body.html"} WebGL Example
+        %nav
+          %ul
+            %li
+              %a{:href => "websocket.html"} WebSockets
+            %li
+              %a{:href => "webworker.html"} WebWorkers
+            %li
+              %a{:href => "webstorage.html"} WebStorage 
+            %li
+              %a{:href => "dragndrop.html"} Drag & Drop 
+            %li
+              %a{:href => "geolocation.html"} Geolocation 
+    %footer
+      %nav
+        %h1 Links
+        %ul
+          %li
+            %a{:href => "http://dev.w3.org/html5/"} Spec
+    :javascript
+      var input = document.querySelector("input");

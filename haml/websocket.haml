@@ -2,15 +2,23 @@
 
 %html
   %head
+    %meta{:charset => "utf-8"}
+    %title Template
     %link{:href => "css/common.css", :rel => "stylesheet", :type => "text/css"}
     %link{:href => "css/websocket.css", :rel => "stylesheet", :type => "text/css"}
   %body
+    %header
+      %hgroup
+        %h1 WebSockets
+        %h2 Sockets for the Web
     %section
-      %label URL: ws://localhost:8340
-      %input{:type => :text}
-      %button.send Send
-      %pre.result
-      %footer
+      %section
+        %input{:type => :text}
+        %button.send Send
+        %pre.result
+    %footer
+      %nav
+        %h1 Links
         %ul
           %li
             %a{:href => "http://dev.w3.org/html5/websockets/"} Spec

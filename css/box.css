@@ -1,3 +1,6 @@
+body > section > section {
+  -webkit-box-orient: vertical; }
+
 section.property ul.box {
   border: 1px solid black;
   display: -webkit-box;
@@ -74,3 +77,5 @@ section.property ul.values {
     padding: 10px; }
     section.property ul.values li.selected {
       font-weight: bold; }
+section.property + section.property {
+  margin-top: 20px; }

@@ -1,16 +1,28 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset='utf-8' />
+    <title>Template</title>
     <link href='css/common.css' rel='stylesheet' type='text/css' />
     <link href='css/websocket.css' rel='stylesheet' type='text/css' />
   </head>
   <body>
+    <header>
+      <hgroup>
+        <h1>WebSockets</h1>
+        <h2>Sockets for the Web</h2>
+      </hgroup>
+    </header>
     <section>
-      <label>URL: ws://localhost:8340</label>
-      <input type='text' />
-      <button class='send'>Send</button>
-      <pre class='result'></pre>
-      <footer>
+      <section>
+        <input type='text' />
+        <button class='send'>Send</button>
+        <pre class='result'></pre>
+      </section>
+    </section>
+    <footer>
+      <nav>
+        <h1>Links</h1>
         <ul>
           <li>
             <a href='http://dev.w3.org/html5/websockets/'>Spec</a>
@@ -19,8 +31,8 @@
             <a href='http://www.igvita.com/2009/12/22/ruby-websockets-tcp-for-the-browser/'>Ruby & Websockets: TCP for the Web</a>
           </li>
         </ul>
-      </footer>
-    </section>
+      </nav>
+    </footer>
     <script type='text/javascript'>
       //<![CDATA[
         var input = document.querySelector("input");

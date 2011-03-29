@@ -58,4 +58,14 @@ section.transform {
       }
     }
   }
+
+  &.origin {
+  
+    div.outer {
+    
+      div.inner {
+        -webkit-transform-origin: 0 0;
+      }
+    }
+  }
 }

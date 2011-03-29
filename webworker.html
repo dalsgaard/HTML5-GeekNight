@@ -1,29 +1,51 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Web Worker</title>
+    <meta charset='utf-8' />
+    <title>WebWorkers</title>
     <link href='css/common.css' rel='stylesheet' type='text/css' />
     <link href='css/webworker.css' rel='stylesheet' type='text/css' />
   </head>
   <body>
+    <header>
+      <hgroup>
+        <h1>WebWorkers</h1>
+        <h2>Don't Freeze!</h2>
+      </hgroup>
+    </header>
     <section>
-      <section class='time'>
-        <button>Time</button>
-        <span></span>
+      <section>
+        <section class='time'>
+          <button>Time</button>
+          <span></span>
+        </section>
+        <section class='primes'>
+          <button class='start'>Start</button>
+          <span></span>
+          <button class='stop'>Stop</button>
+        </section>
       </section>
-      <section class='primes'>
-        <button class='start'>Start</button>
-        <span></span>
-        <button class='stop'>Stop</button>
-      </section>
-      <footer>
+      <aside>
+        <ul>
+          <li>new Worker(&lt;worker&gt;)</li>
+          <li>postMessage</li>
+          <li>terminate</li>
+          <li>importScripts</li>
+          <li>message (event)</li>
+          <li>close</li>
+        </ul>
+      </aside>
+    </section>
+    <footer>
+      <nav>
+        <h1>Links</h1>
         <ul>
           <li>
             <a href='http://dev.w3.org/html5/workers/'>Spec</a>
           </li>
         </ul>
-      </footer>
-    </section>
+      </nav>
+    </footer>
     <script type='text/javascript'>
       //<![CDATA[
         var time = document.querySelector("section.time > span");

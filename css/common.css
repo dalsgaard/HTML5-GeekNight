@@ -17,7 +17,7 @@ body {
     background-color: white;
     color: black;
     display: -webkit-box;
-    min-height: 400px;
+    min-height: 250px;
     padding: 20px 50px;
     -webkit-box-orient: horizontal; }
     body > section > aside {
@@ -28,6 +28,8 @@ body {
       -webkit-border-radius: 10px; }
       body > section > aside li + li {
         margin-top: 5px; }
+      body > section > aside ul + ul {
+        margin-top: 20px; }
     body > section > section {
       display: -webkit-box;
       -webkit-box-align: start;
@@ -58,6 +60,15 @@ ul {
   padding: 0px; }
   ul li {
     list-style-type: none; }
+
+dl dt {
+  font-size: 90%;
+  font-weight: bold; }
+dl dd {
+  margin-bottom: 5px; }
+
+button {
+  padding: 3px 5px; }
 
 .hbox {
   display: -webkit-box;

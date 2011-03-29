@@ -4,7 +4,7 @@
     <meta charset='utf-8' />
     <title>Microdata</title>
     <link href='css/common.css' rel='stylesheet' type='text/css' />
-    <link href='css/template.css' rel='stylesheet' type='text/css' />
+    <link href='css/microdata.css' rel='stylesheet' type='text/css' />
   </head>
   <body>
     <header>
@@ -14,39 +14,51 @@
       </hgroup>
     </header>
     <section>
-      <section itemscope='itemscope' itemtype='http://data-vocabulary.org/Person'>
-        <h2 itemprop='name'>Kim Dalsgaard</h2>
-        <img itemprop='photo' src='http://media03.linkedin.com/media/p/1/000/014/3ba/01395e1.jpg' />
-        <dl>
-          <dt>Organization</dt>
-          <dd itemprop='affiliation'>Trifork</dd>
-          <dt>Title</dt>
-          <dd itemprop='title'>Software Developer</dd>
-          <dt>Home Page</dt>
-          <dd>
-            <a href='http://kimdalsgaard.com' itemprop='url'>Link</a>
-          </dd>
-        </dl>
-        <section itemscope='itemscope' itemtype='http://data-vocabulary.org/address'>
-          <h3>Address</h3>
+      <section>
+        <section itemscope='itemscope' itemtype='http://data-vocabulary.org/Person'>
+          <h2 itemprop='name'>Kim Dalsgaard</h2>
+          <img itemprop='photo' src='http://media03.linkedin.com/media/p/1/000/014/3ba/01395e1.jpg' />
           <dl>
-            <dt>Street Address</dt>
-            <dd itemprop='street-address'>Ajstrup Strandvej 184</dd>
-            <dt>Postal Code</dt>
-            <dd itemprop='postal-code'>8340</dd>
-            <dt>City</dt>
-            <dd itemprop='locality'>Malling</dd>
-            <dt>Country</dt>
-            <dd itemprop='country-name'>Denmark</dd>
+            <dt>Organization</dt>
+            <dd itemprop='affiliation'>Trifork</dd>
+            <dt>Title</dt>
+            <dd itemprop='title'>Software Developer</dd>
+            <dt>Home Page</dt>
+            <dd>
+              <a href='http://kimdalsgaard.com' itemprop='url'>Link</a>
+            </dd>
           </dl>
+          <section itemscope='itemscope' itemtype='http://data-vocabulary.org/address'>
+            <h3>Address</h3>
+            <dl>
+              <dt>Street Address</dt>
+              <dd itemprop='street-address'>Ajstrup Strandvej 184</dd>
+              <dt>Postal Code</dt>
+              <dd itemprop='postal-code'>8340</dd>
+              <dt>City</dt>
+              <dd itemprop='locality'>Malling</dd>
+              <dt>Country</dt>
+              <dd itemprop='country-name'>Denmark</dd>
+            </dl>
+          </section>
         </section>
       </section>
+      <aside>
+        <ul>
+          <li>itemscope</li>
+          <li>itemtype</li>
+          <li>itemprop</li>
+        </ul>
+      </aside>
     </section>
     <footer>
       <h1>Links</h1>
       <ul>
         <li>
           <a href='http://dev.w3.org/html5/md/'>Spec</a>
+        </li>
+        <li>
+          <a href='http://www.data-vocabulary.org/'>Data Vocabulary</a>
         </li>
         <li>
           <a href='http://www.google.com/webmasters/tools/richsnippets'>Rich Snippets Testing Tool</a>

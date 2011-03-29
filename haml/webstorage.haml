@@ -2,64 +2,82 @@
 
 %html
   %head
-    %title Web Storage
+    %title WebStorage
     %link{:href => "css/common.css", :rel => "stylesheet", :type => "text/css"}
     %link{:href => "css/webstorage.css", :rel => "stylesheet", :type => "text/css"}
     :javascript
       function init() {
         addEventListener('storage', function(e) {
           //alert("Change");
-          var changes = document.querySelector("div.changes > pre");
+          var changes = document.querySelector("section.changes > pre");
           changes.innerHTML += e.key + " : " + e.oldValue + " -> " + e.newValue + " (" + e.url + ")\n";
         }, false);
       }
   %body{:onload => "init();"}
+    %header
+      %hgroup
+        %h1 WebStorage
+        %h2 Key/Value Store for the Web
     %section
-      %div.set
-        %input.key{:type => :text}
-        %input.value{:type => :text}
-        %button Set
-      %div.get
-        %input{:type => :text}
-        %button Get
-        %span
-      %div.remove
-        %input{:type => :text}
-        %button Remove
-      %div.clear
-        %button Clear
-      %div.all
-        %button All
-        %pre
-      %div.changes
-        %label Changes
-        %pre
-      %footer
+      %section
+        %section.set
+          %input.key{:type => :text}
+          %input.value{:type => :text}
+          %button Set
+        %section.get
+          %input{:type => :text}
+          %button Get
+          %span
+        %section.remove
+          %input{:type => :text}
+          %button Remove
+        %section.clear
+          %button Clear
+        %section.all
+          %button All
+          %pre
+        %section.changes
+          %label Changes
+          %pre
+      %aside
+        %ul
+          %li localStorage
+          %li setItem(key, value)
+          %li getItem(key)
+          %li removeItem(key)
+          %li clear
+          %li length
+          %li key(index)
+          %li storage (event)
+          %li sessionStorage
+    %footer
+      %nav
+        %h1 Links
         %ul
           %li
             %a{:href => "http://dev.w3.org/html5/webstorage/"} Spec
           %li
             %a{:href => "http://diveintohtml5.org/storage.html"} Dive Into HTML5
     :javascript
-      var setKey = document.querySelector("div.set > input.key");
-      var setValue = document.querySelector("div.set > input.value");
-      var getKey = document.querySelector("div.get > input");
-      var getValue = document.querySelector("div.get > span");
-      var removeKey = document.querySelector("div.remove > input");
-      var all = document.querySelector("div.all > pre");
-      document.querySelector("div.set > button").addEventListener('click', function() {
+      var setKey = document.querySelector("section.set > input.key");
+      var setValue = document.querySelector("section.set > input.value");
+      var getKey = document.querySelector("section.get > input");
+      var getValue = document.querySelector("section.get > span");
+      var removeKey = document.querySelector("section.remove > input");
+      var all = document.querySelector("section.all > pre");
+      document.querySelector("section.set > button").addEventListener('click', function() {
         localStorage.setItem(setKey.value, setValue.value);
       }, false);
-      document.querySelector("div.get > button").addEventListener('click', function() {
+      document.querySelector("section.get > button").addEventListener('click', function() {
         getValue.innerHTML = localStorage.getItem(getKey.value);
       }, false);
-      document.querySelector("div.remove > button").addEventListener('click', function() {
+      document.querySelector("section.remove > button").addEventListener('click', function() {
         localStorage.removeItem(removeKey.value);
       }, false);
-      document.querySelector("div.clear > button").addEventListener('click', function() {
+      document.querySelector("section.clear > button").addEventListener('click', function() {
         localStorage.clear();
       }, false);
-      document.querySelector("div.all > button").addEventListener('click', function() {
+      document.querySelector("section.all > button").addEventListener('click', function() {
         all.innerHTML = "";
         for (var i = 0; i < localStorage.length; i++) {
           var key = localStorage.key(i);

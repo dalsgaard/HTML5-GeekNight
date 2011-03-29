@@ -1,23 +1,26 @@
-body {
-  padding: 20px; }
+body > section > section {
+  -webkit-box-orient: vertical; }
 
-section {
+section.drag, section.drop {
   border: 2px solid #333;
+  display: -webkit-box;
   height: 100px;
-  position: relative;
   width: 500px; }
-  section + section {
+  section.drag + section, section.drop + section {
     margin-top: 10px; }
-  section > div {
-    background-color: green;
+  section.drag > div, section.drop > div {
+    background-color: red;
     border: 2px solid #333;
+    color: white;
     cursor: move;
     height: 80px;
     margin: 10px;
+    padding: 5px;
     position: relative;
+    text-align: center;
     width: 80px;
     -webkit-box-sizing: border-box; }
-    section > div.dragging {
+    section.drag > div.dragging, section.drop > div.dragging {
       opacity: 0.5; }
 
 [draggable] {

@@ -2,15 +2,33 @@
 
 %html
   %head
+    %meta{:charset => "utf-8"}
     %title SVG
     %link{:href => "css/common.css", :rel => "stylesheet", :type => "text/css"}
     %link{:href => "css/svg.css", :rel => "stylesheet", :type => "text/css"}
   %body
+    %header
+      %hgroup
+        %h1 SVG
+        %h2 Vector Graphics for the Web
     %section
-      %section.svg
-        %svg{:xmlns => "http://www.w3.org/2000/svg", :version => "1.1", :width => 200, :height => 200}
-          %circle{:cx => 60, :cy => 70, :r => 50, :fill => "#49A", :stroke => "#000"}
-      %footer
+      %section
+        %section.svg
+          %svg{:xmlns => "http://www.w3.org/2000/svg", :version => "1.1", :width => 300, :height => 300}
+            %circle{:cx => 60, :cy => 60, :r => 40, :fill => "#F66", :stroke => "#000"}
+            %rect{:x => 60, :y => 60, :width => 80, :height => 60, :fill => "#66F", :stroke => "#000", :opacity => 0.7}
+      %aside
+        %ul
+          %li svg
+          %li circle
+          %li rect
+          %li fill
+          %li stroke
+          %li opacity
+          %li click (event)
+    %footer
+      %nav
+        %h1 Links
         %ul
           %li
             %a{:href => "http://raphaeljs.com/"} Raphael
@@ -18,4 +36,8 @@
       var circle = document.querySelector("svg > circle");
       circle.addEventListener('click', function(e) {
         alert("Circle clicked!");
+      }, false);
+      var rect = document.querySelector("svg > rect");
+      rect.addEventListener('click', function(e) {
+        alert("Rect clicked!");
       }, false);

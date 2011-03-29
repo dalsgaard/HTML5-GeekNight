@@ -1,17 +1,14 @@
-body {
-  padding: 20px; }
-
-section {
+div.outer {
   border: 2px solid #333;
   position: relative;
   width: 500px; }
-  section div {
+  div.outer div.inner {
     background-color: red;
-    height: 50px;
+    height: 80px;
     left: 0px;
     position: relative;
-    width: 50px;
+    width: 80px;
     -webkit-transition-property: left;
-    -webkit-transition-duration: 250ms; }
-    section div.selected {
-      left: 450px; }
+    -webkit-transition-duration: 500ms; }
+    div.outer div.inner.selected {
+      left: 420px; }

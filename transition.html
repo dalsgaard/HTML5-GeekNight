@@ -1,15 +1,48 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link href='css/animation.css' rel='stylesheet' type='text/css' />
+    <meta charset='utf-8' />
+    <title>Transitions</title>
+    <link href='css/common.css' rel='stylesheet' type='text/css' />
+    <link href='css/transition.css' rel='stylesheet' type='text/css' />
   </head>
   <body>
+    <header>
+      <hgroup>
+        <h1>Transitions</h1>
+        <h2>Implicit Animations</h2>
+      </hgroup>
+    </header>
     <section>
-      <div></div>
+      <section>
+        <div class='outer'>
+          <div class='inner'></div>
+        </div>
+      </section>
+      <aside>
+        <ul>
+          <li>transition-property</li>
+          <li>transition-duration</li>
+          <li>transition-delay</li>
+          <li>transition-timing-function</li>
+          <li>cubic-bezier(x1, y1, x2, y2)</li>
+          <li>ease-functions</li>
+        </ul>
+      </aside>
     </section>
+    <footer>
+      <nav>
+        <h1>Links</h1>
+        <ul>
+          <li>
+            <a href='http://dev.w3.org/html5/'>Spec</a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
     <script type='text/javascript'>
       //<![CDATA[
-        document.querySelector("section div").addEventListener('click', function() {
+        document.querySelector("div.outer > div.inner").addEventListener('click', function() {
           this.classList.toggle("selected");
         }, false);
       //]]>

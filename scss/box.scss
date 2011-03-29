@@ -1,4 +1,8 @@
 
+body > section > section {
+  -webkit-box-orient: vertical;
+}
+
 section.property {
   
   ul.box {
@@ -184,5 +188,9 @@ section.property {
         font-weight: bold;
       }
     }
+  }
+  
+  & + section.property {
+    margin-top: 20px;
   }
 }

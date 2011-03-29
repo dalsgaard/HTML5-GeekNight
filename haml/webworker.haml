@@ -2,19 +2,35 @@
 
 %html
   %head
-    %title Web Worker
+    %meta{:charset => "utf-8"}
+    %title WebWorkers
     %link{:href => "css/common.css", :rel => "stylesheet", :type => "text/css"}
     %link{:href => "css/webworker.css", :rel => "stylesheet", :type => "text/css"}
   %body
+    %header
+      %hgroup
+        %h1 WebWorkers
+        %h2 Don't Freeze!
     %section
-      %section.time
-        %button Time
-        %span
-      %section.primes
-        %button.start Start
-        %span
-        %button.stop Stop
-      %footer
+      %section
+        %section.time
+          %button Time
+          %span
+        %section.primes
+          %button.start Start
+          %span
+          %button.stop Stop
+      %aside
+        %ul
+          %li new Worker(&lt;worker&gt;)
+          %li postMessage
+          %li terminate
+          %li importScripts
+          %li message (event)
+          %li close
+    %footer
+      %nav
+        %h1 Links
         %ul
           %li
             %a{:href => "http://dev.w3.org/html5/workers/"} Spec

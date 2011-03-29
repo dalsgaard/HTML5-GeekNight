@@ -14,15 +14,32 @@
       </hgroup>
     </header>
     <section>
-      <dl class='position'>
-        <dt>Latitude</dt>
-        <dd class='latitude'></dd>
-        <dt>Longitude</dt>
-        <dd class='longitude'></dd>
-        <dt>Accuracy</dt>
-        <dd class='accuracy'></dd>
-      </dl>
-      <button class='go'>Go</button>
+      <section>
+        <dl class='position'>
+          <dt>Latitude</dt>
+          <dd class='latitude'></dd>
+          <dt>Longitude</dt>
+          <dd class='longitude'></dd>
+          <dt>Accuracy</dt>
+          <dd class='accuracy'></dd>
+        </dl>
+        <button class='go'>Go</button>
+      </section>
+      <aside>
+        <ul>
+          <li>navigator</li>
+          <li>getCurrentPosition</li>
+          <li>latitude</li>
+          <li>longitude</li>
+          <li>altitude</li>
+          <li>accuracy</li>
+          <li>altitudeAccuracy</li>
+          <li>heading</li>
+          <li>speed</li>
+          <li>timestamp</li>
+          <li>watchPosition</li>
+        </ul>
+      </aside>
     </section>
     <footer>
       <h1>Links</h1>
@@ -34,6 +51,7 @@
     </footer>
     <script type='text/javascript'>
       //<![CDATA[
+        // WGS84
         function successCallback(position) {
           document.querySelector("dl.position > dd.latitude").innerHTML = position.coords.latitude;
           document.querySelector("dl.position > dd.longitude").innerHTML = position.coords.longitude;

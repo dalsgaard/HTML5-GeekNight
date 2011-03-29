@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <title>Canvas</title>
+    <link href='css/common.css' rel='stylesheet' type='text/css' />
+    <link href='css/template.css' rel='stylesheet' type='text/css' />
+  </head>
+  <body>
+    <header>
+      <hgroup>
+        <h1>Canvas</h1>
+        <h2>Bitmap Graphics for the Web</h2>
+      </hgroup>
+    </header>
+    <section>
+      <section>
+        <canvas height='300' width='300'></canvas>
+      </section>
+      <aside>
+        <ul>
+          <li>canvas</li>
+          <li>getContext("2d")</li>
+          <li>strokeStyle</li>
+          <li>fillStyle</li>
+          <li>fillRect</li>
+          <li>strokeRect</li>
+          <li>beginPath</li>
+          <li>arc</li>
+          <li>moveTo</li>
+          <li>lineTo</li>
+          <li>closePath</li>
+          <li>fill</li>
+          <li>stroke</li>
+          <li>save</li>
+          <li>restore</li>
+        </ul>
+      </aside>
+    </section>
+    <footer>
+      <nav>
+        <h1>Links</h1>
+        <ul>
+          <li>
+            <a href='http://dev.w3.org/html5/'>Spec</a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+    <script type='text/javascript'>
+      //<![CDATA[
+        var canvas = document.querySelector("canvas");
+        var context = canvas.getContext("2d");
+        context.strokeStyle = "#000";
+        context.fillStyle = "#66F";
+        context.fillRect(60, 60, 80, 60);
+        context.strokeRect(60, 60, 80, 60);
+        context.beginPath();
+        context.arc(60, 60, 40, 0, Math.PI * 2, false);
+        context.closePath();
+        context.fillStyle = "#F66";
+        context.fill();
+        context.stroke();
+      //]]>
+    </script>
+  </body>
+</html>

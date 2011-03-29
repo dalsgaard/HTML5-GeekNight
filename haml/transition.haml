@@ -1,13 +1,35 @@
-!!! 5
+!!!5
 
 %html
   %head
+    %meta{:charset => "utf-8"}
+    %title Transitions
+    %link{:href => "css/common.css", :rel => "stylesheet", :type => "text/css"}
     %link{:href => "css/transition.css", :rel => "stylesheet", :type => "text/css"}
   %body
+    %header
+      %hgroup
+        %h1 Transitions
+        %h2 Implicit Animations
     %section
-      %div
+      %section
+        %div.outer
+          %div.inner
+      %aside
+        %ul
+          %li transition-property
+          %li transition-duration
+          %li transition-delay
+          %li transition-timing-function
+          %li cubic-bezier(x1, y1, x2, y2)
+          %li ease-functions
+    %footer
+      %nav
+        %h1 Links
+        %ul
+          %li
+            %a{:href => "http://dev.w3.org/html5/"} Spec
     :javascript
-      document.querySelector("section div").addEventListener('click', function() {
+      document.querySelector("div.outer > div.inner").addEventListener('click', function() {
         this.classList.toggle("selected");
       }, false);
-      

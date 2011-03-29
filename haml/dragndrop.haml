@@ -2,15 +2,46 @@
 
 %html
   %head
+    %meta{:charset => "utf-8"}
     %title Drag & Drop
     %link{:href => "css/common.css", :rel => "stylesheet", :type => "text/css"}
     %link{:href => "css/dragndrop.css", :rel => "stylesheet", :type => "text/css"}
   %body
+    %header
+      %hgroup
+        %h1 Drag & Drop
+        %h2 Native Drag and Drop for the Browser
     %section
-      %div{:draggable => :true} Content
-    %section.drop
+      %section
+        %section.drag
+          %div{:draggable => :true}
+            HTML5
+            %br
+            Geek-
+            %br
+            Night
+        %section.drop
+      %aside
+        %ul
+          %li dragstart (event)
+          %li dataTransfer
+          %li effectAllowed
+          %li setData
+          %li dragend (event)
+        %ul
+          %li dragenter (event)
+          %li dragover (event)
+          %li preventDefault
+          %li drop (event)
+          %li getData
+    %footer
+      %nav
+        %h1 Links
+        %ul
+          %li
+            %a{:href => "http://dev.w3.org/html5/dnd/"} Spec
     :javascript
-      var draggable = document.querySelector("section > div");
+      var draggable = document.querySelector("section.drag > div");
       var droppable = document.querySelector("section.drop");
       draggable.addEventListener('dragstart', function(e) {
         e.dataTransfer.effectAllowed = 'copy';

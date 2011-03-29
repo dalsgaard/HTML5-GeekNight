@@ -1,0 +1,11 @@
+
+section > nav {
+
+  & + nav { 
+    margin-left: 20px;
+  }
+  
+  li + li {
+    margin-top: 5px;
+  }
+}

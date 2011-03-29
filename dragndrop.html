@@ -1,18 +1,61 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset='utf-8' />
     <title>Drag & Drop</title>
     <link href='css/common.css' rel='stylesheet' type='text/css' />
     <link href='css/dragndrop.css' rel='stylesheet' type='text/css' />
   </head>
   <body>
+    <header>
+      <hgroup>
+        <h1>Drag & Drop</h1>
+        <h2>Native Drag and Drop for the Browser</h2>
+      </hgroup>
+    </header>
     <section>
-      <div draggable='true'>Content</div>
+      <section>
+        <section class='drag'>
+          <div draggable='true'>
+            HTML5
+            <br />
+            Geek-
+            <br />
+            Night
+          </div>
+        </section>
+        <section class='drop'></section>
+      </section>
+      <aside>
+        <ul>
+          <li>dragstart (event)</li>
+          <li>dataTransfer</li>
+          <li>effectAllowed</li>
+          <li>setData</li>
+          <li>dragend (event)</li>
+        </ul>
+        <ul>
+          <li>dragenter (event)</li>
+          <li>dragover (event)</li>
+          <li>preventDefault</li>
+          <li>drop (event)</li>
+          <li>getData</li>
+        </ul>
+      </aside>
     </section>
-    <section class='drop'></section>
+    <footer>
+      <nav>
+        <h1>Links</h1>
+        <ul>
+          <li>
+            <a href='http://dev.w3.org/html5/dnd/'>Spec</a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
     <script type='text/javascript'>
       //<![CDATA[
-        var draggable = document.querySelector("section > div");
+        var draggable = document.querySelector("section.drag > div");
         var droppable = document.querySelector("section.drop");
         draggable.addEventListener('dragstart', function(e) {
           e.dataTransfer.effectAllowed = 'copy';

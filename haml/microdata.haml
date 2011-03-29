@@ -5,36 +5,41 @@
     %meta{:charset => "utf-8"}
     %title Microdata
     %link{:href => "css/common.css", :rel => "stylesheet", :type => "text/css"}
-    %link{:href => "css/template.css", :rel => "stylesheet", :type => "text/css"}
+    %link{:href => "css/microdata.css", :rel => "stylesheet", :type => "text/css"}
   %body
     %header
       %hgroup
         %h1 Microdata
         %h2 Scoped name/value pairs from custom vocabularies
     %section
-      %section{:itemscope => true, :itemtype => "http://data-vocabulary.org/Person"}
-        %h2{:itemprop => "name"} Kim Dalsgaard
-        %img{:itemprop => "photo", :src => "http://media03.linkedin.com/media/p/1/000/014/3ba/01395e1.jpg"}
-        %dl
-          %dt Organization
-          %dd{:itemprop => "affiliation"} Trifork
-          %dt Title
-          %dd{:itemprop => "title"} Software Developer
-          %dt Home Page
-          %dd
-            %a{:itemprop => "url", :href => "http://kimdalsgaard.com"} Link
-        %section{:itemscope => true, :itemtype => "http://data-vocabulary.org/address"}
-          %h3 Address
+      %section
+        %section{:itemscope => true, :itemtype => "http://data-vocabulary.org/Person"}
+          %h2{:itemprop => "name"} Kim Dalsgaard
+          %img{:itemprop => "photo", :src => "http://media03.linkedin.com/media/p/1/000/014/3ba/01395e1.jpg"}
           %dl
-            %dt Street Address
-            %dd{:itemprop => "street-address"} Ajstrup Strandvej 184
-            %dt Postal Code
-            %dd{:itemprop => "postal-code"} 8340
-            %dt City
-            %dd{:itemprop => "locality"} Malling
-            %dt Country
-            %dd{:itemprop => "country-name"} Denmark
-        
+            %dt Organization
+            %dd{:itemprop => "affiliation"} Trifork
+            %dt Title
+            %dd{:itemprop => "title"} Software Developer
+            %dt Home Page
+            %dd
+              %a{:itemprop => "url", :href => "http://kimdalsgaard.com"} Link
+          %section{:itemscope => true, :itemtype => "http://data-vocabulary.org/address"}
+            %h3 Address
+            %dl
+              %dt Street Address
+              %dd{:itemprop => "street-address"} Ajstrup Strandvej 184
+              %dt Postal Code
+              %dd{:itemprop => "postal-code"} 8340
+              %dt City
+              %dd{:itemprop => "locality"} Malling
+              %dt Country
+              %dd{:itemprop => "country-name"} Denmark
+      %aside
+        %ul
+          %li itemscope
+          %li itemtype
+          %li itemprop
     %footer
       %h1 Links
       %ul
