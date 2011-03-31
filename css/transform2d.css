@@ -1,3 +1,11 @@
+body > section > section {
+  -webkit-box-orient: vertical; }
+  body > section > section > section {
+    display: -webkit-box;
+    -webkit-box-orient: horizontal; }
+    body > section > section > section + section {
+      margin-top: 20px; }
+
 section.transform {
   display: -webkit-box;
   -webkit-box-align: center;

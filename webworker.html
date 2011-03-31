@@ -50,7 +50,7 @@
       //<![CDATA[
         var time = document.querySelector("section.time > span");
         document.querySelector("section.time > button").addEventListener('click', function() {
-          time.innerHTML = (new Date()).toString();
+          time.innerHTML = (new Date()).toTimeString();
         }, false);
         
         var prime = document.querySelector("section.primes > span");

@@ -1,3 +1,15 @@
+body > section > section {
+  -webkit-box-orient: vertical;
+  
+  & > section {
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    
+    & + section {
+      margin-top: 20px;
+    }
+  }
+}
 
 section.transform {
   display: -webkit-box;

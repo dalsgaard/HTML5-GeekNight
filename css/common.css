@@ -13,6 +13,8 @@ body {
     border-bottom: 4px solid #6B3;
     color: white;
     padding: 20px 50px; }
+    body > header h1 + h2 {
+      font-size: 130%; }
   body > section {
     background-color: white;
     color: black;
@@ -34,7 +36,8 @@ body {
       display: -webkit-box;
       -webkit-box-align: start;
       -webkit-box-flex: 1;
-      -webkit-box-orient: horizontal; }
+      -webkit-box-orient: horizontal;
+      -webkit-box-lines: multiple; }
     body > section h2 {
       font-size: 140%; }
   body > footer {

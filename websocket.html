@@ -37,8 +37,8 @@
       //<![CDATA[
         var input = document.querySelector("input");
         var result = document.querySelector("pre.result");
-        //var connection = new WebSocket('ws://html5rocks.websocket.org/echo');
-        var connection = new WebSocket('ws://localhost:8340');
+        var connection = new WebSocket('ws://html5rocks.websocket.org/echo');
+        //var connection = new WebSocket('ws://localhost:8340');
         connection.onopen = function () {
           document.querySelector("button.send").addEventListener('click', function() {
             connection.send(input.value);

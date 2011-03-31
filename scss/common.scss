@@ -16,6 +16,9 @@ body {
 		color: white;
 		padding: 20px 50px;
 		
+		h1 + h2 {
+		  font-size: 130%;
+		}
 	}
 	
 	& > section {
@@ -24,7 +27,7 @@ body {
 		display: -webkit-box;
 		min-height: 250px;
 		padding: 20px 50px;
-		-webkit-box-orient: horizontal;	
+		-webkit-box-orient: horizontal;
 
 		& > aside {
 			border: 3px solid #555;
@@ -47,6 +50,7 @@ body {
 			-webkit-box-align: start;
 			-webkit-box-flex: 1;
 			-webkit-box-orient: horizontal;
+  		-webkit-box-lines: multiple;
 		}
 
 		h2 {

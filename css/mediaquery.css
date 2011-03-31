@@ -1,12 +1,13 @@
 body > section {
   background-color: red;
+  color: #ddd;
   min-height: 200px; }
   body > section .narrow {
     display: none; }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 550px) {
   body > section {
-    background-color: green; }
+    background-color: blue; }
     body > section .narrow {
       display: inherit; }
     body > section .wide {

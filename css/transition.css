@@ -1,7 +1,7 @@
 div.outer {
   border: 2px solid #333;
   position: relative;
-  width: 500px; }
+  width: 300px; }
   div.outer div.inner {
     background-color: red;
     height: 80px;
@@ -11,4 +11,4 @@ div.outer {
     -webkit-transition-property: left;
     -webkit-transition-duration: 500ms; }
     div.outer div.inner.selected {
-      left: 420px; }
+      left: 220px; }

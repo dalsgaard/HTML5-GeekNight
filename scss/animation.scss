@@ -1,7 +1,7 @@
 div.outer {
   border: 2px solid #333;
   position: relative;
-  width: 500px;
+  width: 300px;
 
   div.inner {
     background-color: red;
@@ -11,7 +11,7 @@ div.outer {
     top: 0px;
     width: 80px;
     &.selected {
-      left: 420px;
+      left: 220px;
       -webkit-animation-name: slide;
       -webkit-animation-duration: 2s;
       -webkit-animation-iteration-count: 1;
@@ -25,14 +25,14 @@ div.outer {
     -webkit-animation-timing-function: ease-in-out;
   }
   70% {
-    left: 500px;
+    left: 300px;
     -webkit-animation-timing-function: ease-in-out;
   }
   90% {
-    left: 400px;
+    left: 200px;
     -webkit-animation-timing-function: ease-in;
   }
   100% {
-    left: 420px;
+    left: 220px;
   }
 }

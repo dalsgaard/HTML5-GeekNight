@@ -1,4 +1,7 @@
+body > section > section {
+  -webkit-box-orient: vertical;
+}
 
 section.video + section.video {
-  margin-left: 20px;
+  margin-top: 20px;
 }
